@@ -1,0 +1,38 @@
+ <!doctype html>
+ <html lang="tr-TR">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>js-dom-list-app</title>
+    
+    </head>
+    <body>
+        
+        <input type="text" id="text">
+        <button id="add">Ekle</button>
+        <ul id="list"></ul>
+
+        <script type="text/javascript" language="javascript">
+
+        const input = document.querySelector("#text");
+        const button = document.querySelector("#add");
+        const list = document.querySelector("#list");
+
+        button.addEventListener("click", () => {
+            if(input.value === "") return;
+
+            const li = document.createElement("li");
+            li.textContent = input.value;
+            
+            li.addEventListener("click", () => {
+                li.remove();
+            });
+
+            list.appendChild(li);
+            input.value = "";
+        });
+
+        </script>
+
+
+    </body>
+ </html>
