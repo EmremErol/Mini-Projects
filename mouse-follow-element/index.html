@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>mouse-follow-element</title>
+    </head>
+    <body>
+        
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit corporis saepe optio explicabo ad libero esse laborum magnam repellat! Distinctio sint rem laborum accusantium dignissimos veniam, perspiciatis minima voluptatem quo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis eligendi accusamus voluptates totam laborum minima dolorem iste reprehenderit veniam fugit facilis amet, cum atque ea voluptate, perspiciatis consectetur modi magni? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta voluptates libero debitis tenetur cumque impedit quasi porro, architecto voluptas quis ducimus error. Deserunt ipsum quibusdam et rerum, neque nisi ipsa.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus cupiditate, aperiam quo debitis voluptate aut sed saepe! Ratione, laboriosam exercitationem minus praesentium molestias blanditiis corrupti esse dolor? Doloremque, mollitia optio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus voluptatibus fugit delectus quaerat adipisci, numquam pariatur aspernatur, expedita ratione, minima maxime modi quas assumenda error autem? Quidem blanditiis hic deleniti?
+</div>
+
+<div id="gezenAlan"><img src="logo.png" width="50" height="29" border="0"></div>
+
+        <script type="text/javascript" language="javascript">
+            let alan = document.getElementById("gezenAlan");
+            alan.style.position = "absolute";
+            window.addEventListener("mousemove", function(event){
+            alan.style.left = event.clientX + 15 + "px";
+            alan.style.top  = event.clientY + "px";
+                });
+        </script>
+    </body>
+</html>
