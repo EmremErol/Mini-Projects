@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>dynamic-page-title</title>
+    </head>
+    <body>
+        
+
+
+        <script type="text/javascript" language="javascript">
+            const titles = ["Javascript", "Html", "Css", "Php", "Java", "Xml"];
+            let index = 0;
+
+            setInterval(() => {
+                document.title = titles[index];
+                index = (index + 1) % titles.length;
+
+            }, 2000);
+        </script>
+
+
+    </body>
+</html>
