@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>text-size-controller-js
+</title>
+        <style>
+            body{
+                margin:0;
+            }
+            #kapsamaAlani{
+                width:100%;
+                height:100%;
+                text-align:center;
+            }
+            #haberAlani{
+                width:1000px;
+                margin:0 auto;
+            }
+            #baslikAlani{
+                width:900px;
+                height:60px;
+                float:left;
+                text-align:left;      
+            }
+            #iconAlani{
+                width:100px;
+                height:45px;
+                padding-top:15px;
+                float:left;
+                text-align:right;
+            }
+            #icerik{
+                text-align:justify;
+                font-size:15px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="kapsamaAlani">
+            <div id="haberAlani">
+                <div id="baslikAlani">
+                   <h3> Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> </div>
+                <div id="iconAlani">
+                    <img src="buyut.jpg" id="btnBuyut" title="Metni Büyüt" style="cursor:pointer;">
+                    <img src="kucult.jpg" id="btnKucult" title="Metni Küçült" style="cursor:pointer;">
+                </div>
+                <hr>
+                <div id="icerik">
+                    <strong>Lorem ipsum</strong><br> dolor sit amet consectetur, adipisicing elit. Itaque doloremque libero consectetur ipsa ut, debitis vero blanditiis, modi asperiores veniam adipisci ab cumque, nisi error. Consequatur consectetur assumenda temporibus optio?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum error id blanditiis ipsa eveniet eaque velit illum cumque odio exercitationem molestias sint repudiandae excepturi voluptatum a iusto, repellat quasi aspernatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fuga illum minima, dolore iure molestias quaerat doloremque tempora, inventore minus, eos magnam optio totam aut cum explicabo. Maiores, excepturi voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eum totam distinctio tempore ipsum corporis, omnis repudiandae quidem exercitationem! Deleniti, eligendi. Reiciendis accusantium doloribus libero id qui cupiditate quidem dolorem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo blanditiis consectetur iusto dolor excepturi voluptate suscipit sequi, praesentium quia quas itaque amet, rerum, eaque sint facilis quod ullam. Voluptatem, soluta?
+                    <br> <br>
+                    <strong>Lorem ipsum</strong><br> dolor sit amet consectetur, adipisicing elit. Itaque doloremque libero consectetur ipsa ut, debitis vero
+                    blanditiis, modi asperiores veniam adipisci ab cumque, nisi error. Consequatur consectetur assumenda temporibus optio?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum error id blanditiis ipsa eveniet eaque velit illum
+                    cumque odio exercitationem molestias sint repudiandae excepturi voluptatum a iusto, repellat quasi aspernatur! Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fuga illum minima, dolore iure molestias quaerat
+                    doloremque tempora, inventore minus, eos magnam optio totam aut cum explicabo. Maiores, excepturi voluptate. Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Quod eum totam distinctio tempore ipsum corporis, omnis repudiandae quidem
+                    exercitationem! Deleniti, eligendi. Reiciendis accusantium doloribus libero id qui cupiditate quidem dolorem? Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Nemo blanditiis consectetur iusto dolor excepturi voluptate suscipit
+                    sequi, praesentium quia quas itaque amet, rerum, eaque sint facilis quod ullam. Voluptatem, soluta?
+                    <br> <br>
+                    <strong>Lorem ipsum</strong><br> dolor sit amet consectetur, adipisicing elit. Itaque doloremque libero consectetur ipsa ut, debitis vero
+                    blanditiis, modi asperiores veniam adipisci ab cumque, nisi error. Consequatur consectetur assumenda temporibus optio?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum error id blanditiis ipsa eveniet eaque velit illum
+                    cumque odio exercitationem molestias sint repudiandae excepturi voluptatum a iusto, repellat quasi aspernatur! Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fuga illum minima, dolore iure molestias quaerat
+                    doloremque tempora, inventore minus, eos magnam optio totam aut cum explicabo. Maiores, excepturi voluptate. Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Quod eum totam distinctio tempore ipsum corporis, omnis repudiandae quidem
+                    exercitationem! Deleniti, eligendi. Reiciendis accusantium doloribus libero id qui cupiditate quidem dolorem? Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Nemo blanditiis consectetur iusto dolor excepturi voluptate suscipit
+                    sequi, praesentium quia quas itaque amet, rerum, eaque sint facilis quod ullam. Voluptatem, soluta?
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" language="javascript">
+            const icerik = document.getElementById("icerik");
+                const btnBuyut = document.getElementById("btnBuyut");
+                const btnKucult = document.getElementById("btnKucult");
+
+                let fontSize = 15;
+                const minSize = 12;
+                const maxSize = 22;
+
+                btnBuyut.addEventListener("click", () => {
+                    if (fontSize < maxSize) {
+                        fontSize++;
+                        icerik.style.fontSize = fontSize + "px";
+                    }
+                });
+
+                btnKucult.addEventListener("click", () => {
+                    if (fontSize > minSize) {
+                        fontSize--;
+                        icerik.style.fontSize = fontSize + "px";
+                    }
+                });
+        </script>
+    </body>
+</html>
